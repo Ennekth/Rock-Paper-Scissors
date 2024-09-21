@@ -6,8 +6,123 @@
     <title>Document</title>
 </head>
 
+<!-- Author @ Kenneth John Cardel
+            @ Ennekth  -->
 
 <style>
+    #titleScreen{
+        visibility: visible;
+        background-color: blueviolet;
+        position:fixed;
+        top: 0px;
+        background-position: center;
+        background-attachment: fixed;
+        background-image: url(/Assets/gym_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+        width: 1440px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+            .h4{
+                font-size: 45px;
+                display: grid;
+                place-items: center;
+                font-style: bold;
+                color: beige;
+                -webkit-text-stroke-color: rgb(0, 0, 0);
+                -webkit-text-stroke-width: 2px;
+                padding-top: 50px;
+            }
+            .h5{
+                font-size: 80px;
+                font-family:Impact;
+                padding: 0px;
+                width: 600px;
+                height: auto;
+                color: yellow;
+                -webkit-text-stroke-color:blue;
+                -webkit-text-stroke-width: 4px;
+                display: grid;
+                place-items: center;
+                
+            }
+            .logo{
+                width: 100px;
+                height: 100px;
+                display: grid;
+                place-items: center;
+                top: 200px;
+                position: absolute;
+            }
+            .logo img{
+                width: 100%;
+                height: 100%;
+                
+                animation: logoSpin 4s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes logoSpin {
+                from{
+                    transform: rotate(0deg);
+                }
+                25% {
+                    transform: rotate(45%);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+        .pindutan{
+            margin-top: 200px;
+            display: flex;
+        }    
+            #start{
+                border-radius: 10px;
+                width: 100px;
+                margin: 20px;
+                height: auto;
+                background-color: yellow;
+                display: grid;
+                place-items: center;
+            }
+            #mechanics{
+                border-radius: 10px;
+                width: auto;
+                margin: 20px;
+                height: auto;
+                background-color: blue;
+                display: grid;
+                place-items: center;
+                color: white;
+                
+            }
+            .mechTop{
+                display: flex;
+                justify-content: space-between;
+            }
+                .mech{
+                    background-color: gray;
+                    z-index: 3;
+                    width: auto;
+                    height: auto;
+                    color: white;
+                    padding: 10px;
+                    position: fixed;
+                    visibility: hidden;
+                }
+                .x{
+                    color: red;
+                    
+                    top: 10px;
+                    left: 600px;
+                }
+
     .title{
         background-color: aqua;
         height: 50px;
@@ -28,6 +143,10 @@
 
     .battleZone{
         background-color: blue;
+        background-image: url(/Assets/poke_bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         height: 400px;
         display: flex;
         justify-content: space-evenly;
@@ -35,34 +154,73 @@
         
         
     }
-        .gym{
-            position: fixed;
-            opacity: 30%;
-            width: 300px;
-            padding-top: 0px;
-            
-        }
+        
         #message{
-            font-size: 20px;
+            font-size: 40px;
             color: antiquewhite;
             position: fixed;
-            top: 100px;
+            top: 150px;
+            background-color: black;
+            border-radius: 20px;
+            padding: 10px;
         }
-        #interlude{
-            display: none;
-            font-size: 20px;
-            color: antiquewhite;
-            position: fixed;
-            top: 250px;
-            left: 390px;
-            width: 10px;
-        }
-        #interlude img{
-                position: fixed;
-                border-radius: 50%;
-                width: 10%;
-                
-        }
+                #play{
+                    visibility: hidden;
+                    width: 500px;
+                    height: auto;
+                    background-color: gray;
+                    position: fixed;
+                    top: 220px;
+                    display: grid;
+                    place-items: center;
+                    background-image: url(/Assets/bal2l.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-blend-mode:lighten; 
+                }
+                    
+                    .scoreContainer{                        
+                        display: flex;
+                        justify-content: space-between;
+                        width: 300px;
+                    }
+                        .scoreContainer h3{
+                            color: rgb(185, 16, 134);
+                        }
+                    .scoreContent{
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        width: 300px;
+                        height: 90px;
+                        
+                        
+                    }
+                    .winner{
+                        padding-bottom: 30px;
+                    }
+                        .scoreContent h2{
+                           height: 50px;
+                        }
+                        .retry{
+                            background-color: rgb(34, 124, 94);
+                            font-size: 25px;
+                            margin: 20px;
+                        }
+                            .retry:hover{
+                                background-color: rgb(176, 252, 226);
+                                font-size: 30px;                               
+                            }
+                        .menu{
+                            background-color: rgb(34, 124, 94);
+                            font-size: 25px;
+                            margin: 20px;
+                        }
+                            .menu:hover{
+                                background-color: rgb(176, 252, 226);
+                                font-size: 30px;                               
+                                }
+      
         h2{
             font-size: 50px;
         }
@@ -118,8 +276,9 @@
         width: 550px;
         height: 255px;
         z-index: 1;
-        margin-left: 150px;
+        
         margin-top: 145px;
+        
         
     }
     .selectTitle{
@@ -186,6 +345,224 @@
                 height: 110px;
             }
 
+
+@media screen and (max-width:720px){
+    .h4{
+                font-size: 35px;
+                -webkit-text-stroke-width: 1px;
+    }
+    .h5{
+        font-size: 50px;
+        -webkit-text-stroke-width: 3px;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+    #start{
+                
+                width: 80px;
+                margin: 15px;
+                
+            }
+    #mechanics{
+                
+                margin: 15px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    #message{
+            font-size: 30px;
+    }
+    h2{
+            font-size: 40px;
+        }
+        .box1{
+            
+            width: 150px;
+            height: 150px;
+        }
+        .box2{
+             
+            width: 150px;
+            height: 150px;
+        }
+        #window{
+        
+        width: 450px;
+        height: 250px;
+        margin-top: 105px;
+        
+        
+    }
+    .selectTitle{
+        margin-left: 120px;
+    }
+    .rock{
+        width: 100px;
+        height: 100px;
+    }
+    .paper{
+        width: 100px;
+        height: 100px;
+    }
+    .scissors{
+        width: 100px;
+        height: 100px;
+    }
+    
+            #btn1{
+                background: none;
+                height: 90px;
+            }
+            #btn2{
+                height: 90px;
+            }
+            #btn3{
+                height: 90px;
+            }
+            #button{
+            
+            width: 170px;
+            height: 40px;
+            
+        }
+        #button1{
+            
+            width: 170px;
+            height: 40px;
+            
+        }
+        .winner{
+                        padding-bottom: 30px;
+                    }
+                        .scoreContent h2{
+                           height: 40px;
+                        }
+                        .retry{
+                            background-color: rgb(34, 124, 94);
+                            font-size: 20px;
+                            margin: 15px;
+                        }
+                            .retry:hover{
+                                background-color: rgb(176, 252, 226);
+                                font-size: 25px;                               
+                            }
+                        .menu{
+                            background-color: rgb(34, 124, 94);
+                            font-size: 20px;
+                            margin: 15px;
+                        }
+                            .menu:hover{
+                                background-color: rgb(176, 252, 226);
+                                font-size: 25px;                               
+                                }
+}
+
+@media screen and (max-width:380px) {
+    .h4{
+                font-size: 25px;
+                
+    }
+    .h5{
+        font-size: 40px;
+        -webkit-text-stroke-width: 2px;
+    }
+    #message{
+            font-size: 20px;
+    }
+    h2{
+            font-size: 30px;
+        }
+        .box1{
+            
+            width: 100px;
+            height: 100px;
+        }
+        .box2{
+             
+            width: 100px;
+            height: 100px;
+        }
+        #window{
+        
+        width: 300px;
+        height: 200px;
+        margin-top: 80px;
+        
+        
+    }
+    .selectTitle{
+        margin-left: 100px;
+        font-size: 10px;
+    }
+    .rock{
+        width: 80px;
+        height: 80px;
+    }
+    .paper{
+        width: 80px;
+        height: 80px;
+    }
+    .scissors{
+        width: 80px;
+        height: 80px;
+    }
+    #btn1{
+                background: none;
+                height: 80px;
+            }
+            #btn2{
+                height: 80px;
+            }
+            #btn3{
+                height: 80px;
+            }
+            #button{
+            
+            width: 120px;
+            height: 30px;
+            
+        }
+        #button1{
+            
+            width: 120px;
+            height: 30px;
+            
+        }
+        .winner{
+                        padding-bottom: 30px;
+                    }
+                        .scoreContent h2{
+                           height: 30px;
+                        }
+                        .retry{
+                            background-color: rgb(34, 124, 94);
+                            font-size: 15px;
+                            margin: 10px;
+                        }
+                            .retry:hover{
+                                background-color: rgb(176, 252, 226);
+                                font-size: 20px;                               
+                            }
+                        .menu{
+                            background-color: rgb(34, 124, 94);
+                            font-size: 15px;
+                            margin: 10px;
+                        }
+                            .menu:hover{
+                                background-color: rgb(176, 252, 226);
+                                font-size: 20px;                               
+                                }
+                                .scoreContainer{                        
+                        display: flex;
+                        justify-content: space-evenly;
+                        width: 200px;
+                    }
+}
+
+
 </style>
 
 
@@ -196,124 +573,164 @@
         let pscore = 0;
         let cscore = 0;
         let a=0;
-       
         
+        
+        const images = {
+            0: "/Assets/file-pokeball-png-0.png",
+                    1: "/Assets/Golem-removebg-preview.png",
+                    2: "/Assets/Kartana.png",
+                    3: "/Assets/Scizor.png"
+        }
 
+        function startUp(){
+            document.getElementById('titleScreen').style.visibility = "hidden";
+        }
 
+        function endUp() {
+            document.getElementById('titleScreen').style.visibility = "visible";
+            const mess =document.getElementById("message");
+               const replayClick=document.getElementById('play').style.visibility = "hidden";
+                pscore=0;
+                cscore=0;
+                a=0;
+                document.getElementById("pScore").innerText = pscore;
+                document.getElementById("cScore").innerText = cscore;
+                mess.innerText="GO";
+                    mess.style.backgroundColor = "black" ;
+                const playerPokeball=document.getElementById('pic1');
+                playerPokeball.src=images[a];
+                const computerPokeball=document.getElementById('pic2');
+                computerPokeball.src=images[a];
+        }
+
+        function openMech(){
+            document.getElementById('mech').style.visibility = "visible";
+
+        }
+             
+        function closeMech() {
+            
+            document.getElementById('mech').style.visibility = "hidden";
+        }
+            
+
+// pag pinindot su "Choose Pokemon"
         function popUp () {
             let popup = document.getElementById('window');
-            console.log(popup);
-           popup.style.display = "block";
-           
+            
+            popup.style.display = "block"; 
         }
 
+//  pag nagpindot sa pilian
         function closeChoices(numChoice) {
-            const images = {
-                    1: "/Assets/Golem-removebg-preview.png",
-                    2: "/Assets/Kartana.png",
-                    3: "/Assets/Scizor.png"
-                }
-
-            const playerPokemon = numChoice;
-            
+            const playerPokemon = numChoice; 
             const playerPokeball=document.getElementById('pic1');
-            playerPokeball.src=images[playerPokemon];
+                playerPokeball.src=images[playerPokemon];
             let popup = document.getElementById('window');
             popup.style.display = "none";
-            
-             a=playerPokemon;
+                a=playerPokemon;
         }
        
             
         
+// pag pinindot su "Fight"
+        function fight(){       
+// pag wara pa napili      
+          if(a===0){
             
-        function fight(){
-
-
-            const images = {
-                    1: "/Assets/Golem-removebg-preview.png",
-                    2: "/Assets/Kartana.png",
-                    3: "/Assets/Scizor.png"
-                }
-            
-                const computerPokemon = Math.floor(Math.random()*3)+1;
-            // alert(computerPokemon);
-            const computerPokeball=document.getElementById('pic2');
-            computerPokeball.src=images[computerPokemon];
-               if(a===0){
                alert("Please choose a Pokemon first!");
-            }else{
-           const result = check(a,computerPokemon);
+               
+            }
+// pag ayu na
+          else{
+            const computerPokemon = Math.floor(Math.random()*3)+1;
+            const computerPokeball=document.getElementById('pic2');
+                computerPokeball.src=images[computerPokemon];
+// itaw su a=p & computerPokemon=c sa function check
+                const result = check(a,computerPokemon);
                 newScore(result);
                 callMe(result);
             }
         }
        
-            function check(p,c) {
+        function check(p,c) {
                 if(p === c){
                     // alert("DRAW");
                     return "DRAW";
-                }else
-                if(
-                    (p === 1 && c === 3) ||
-                    (p === 2 && c === 1) ||
-                    (p === 3 && c === 2)
-                ){  
+                }else if((p === 1 && c === 3) || (p === 2 && c === 1) || (p === 3 && c === 2)){  
                     // alert("win");
-                    return "PLAYER";
-                    
+                    return "PLAYER";    
                 }else{
                     // alert("lose");
                    return "COMPUTER"; 
-                }
-                
-            }
+                }        
+        }
 
-            function newScore(win){
+        function newScore(win){
+            const replay=document.getElementById('play');
+            const updateScore1=document.getElementById('pscore1');
+            const updateScore2=document.getElementById('cscore1');
+            const mensahe=document.getElementById('winners');
                 if(win==="PLAYER"){
                     pscore++;
  document.getElementById("pScore").innerText = pscore;
-
                     if (pscore===3) {
-            alert("Player Wins");
-            var gap = document.getElementById("interlude");
-                gap.style.display='block';
-                gap.style.transition='all 1s ease-in-out';
-                gap.style.display='none';
-                console.log(gap.style);
-            pscore = 0;
-        } 
+                        replay.style.visibility = "visible";
+                        updateScore1.innerText=pscore;
+                        updateScore2.innerText=cscore;
+                        mensahe.innerText="Player Wins";
+                    }else{}
+
                 }else if(win==="COMPUTER"){
                     cscore++;
-document.getElementById("cScore").innerText = cscore;
-
-                     if(cscore===3){
-            alert("Computer Wins");
-            var gap = document.getElementById("interlude");
-                gap.style.display='block';
-                gap.style.transition='all 1s ease-in-out';
-                gap.style.display='none';
-                console.log(gap.style);
-            cscore = 0;
+document.getElementById("cScore").innerText = cscore;              
+                    if(cscore===3){
+                        replay.style.visibility = "visible";
+                        updateScore1.innerText=pscore;
+                        updateScore2.innerText=cscore;
+                        mensahe.innerText="Computer Wins";
+                    }
+                } 
+                   
         }
-                }
-
-               
-                
-            }
 
             function callMe(result){
                 const mess =document.getElementById("message");
                 if(result === "PLAYER"){
+                    
                     mess.innerText="WIN";
+                    mess.style.backgroundColor = "green" ;
+                    
                 }else if(result==="DRAW"){
                     mess.innerText="DRAW";
-                }else{
+                    mess.style.backgroundColor = "gray" ;
+                }else if(result==="COMPUTER"){
                     mess.innerText="LOSE";
+                    mess.style.backgroundColor = "red" ;
+                    
+                }else{
+                    mess.innerText="GO";
+                    mess.style.backgroundColor = "black" ;
                 }
                 
                 
 
+            }
+
+            function playAgainClick(){
+                const mess =document.getElementById("message");
+               const replayClick=document.getElementById('play').style.visibility = "hidden";
+                pscore=0;
+                cscore=0;
+                a=0;
+                document.getElementById("pScore").innerText = pscore;
+                document.getElementById("cScore").innerText = cscore;
+                mess.innerText="GO";
+                    mess.style.backgroundColor = "black" ;
+                const playerPokeball=document.getElementById('pic1');
+                playerPokeball.src=images[a];
+                const computerPokeball=document.getElementById('pic2');
+                computerPokeball.src=images[a];
             }
 
 </script>
@@ -333,15 +750,7 @@ document.getElementById("cScore").innerText = cscore;
                 <h3 class="stat">Player</h3> <h3 class="stat">Computer</h3>
             </div>
 
-            <div id="window">
-                <h3 class="selectTitle">'''Choose Your Pokemon'''</h3>
-                <div class="selection">
-                    
-                    <div class="rock"> <button onclick="closeChoices(1)" id="btn1"><img src="/Assets/Golem-removebg-preview.png" alt=""><p>Golem : Rock</p></div> </button> 
-                    <div class="paper"> <button onclick="closeChoices(2)" id="btn2"><img src="/Assets/Kartana.png" alt=""><p>Kartana : Paper</p></div> </button>
-                    <div class="scissors"> <button onclick="closeChoices(3)" id="btn3"><img src="/Assets/Scizor.png" alt=""><p>Scizor : Scissors</p></div> </button>
-                </div>
-            </div>
+            
 
             <div class="buttons">
                 <button onclick="popUp()" id="button" >Choose Pokemon</button>
@@ -357,8 +766,50 @@ document.getElementById("cScore").innerText = cscore;
                 <h2>VS</h2>
                 <div class="box2"><img id="pic2" src="/Assets/file-pokeball-png-0.png" alt=""></div>
                 <div id="message">GO!</div>
-                <div id="interlude"><img src="/Assets/bal2l.jpg" alt="please wait"></div>
-                <img src="/Assets/poke_bg.jpg" alt="" class="gym">
+
+                <div id="mech" class="mech"> <div class="mechTop">  <h1>Game Mechanics</h1> <button onclick="closeMech()"><h1 class="x">X</h1></button>  </div>
+                <p>1. Click on "Choose Pokemon" and choose among the given choices.</p>
+                <p>2. After you have chosen your pick, you can change it again if you want or go with it and click "Fight".</p>
+                <p>3. Round results are automatically shown and whoever gets 3 points first wins the match.</p>
+                <p>-Ennekth</p>
+                </div>
+
+                <div id="titleScreen">
+                    <div class="h4">Rock , Paper , Scissors</div>
+                    <div class="h5">Poke'mon Edition</div>
+                    <div class="logo"><img src="/Assets/file-pokeball-png-0.png" alt=""></div>
+                    <div class="pindutan">
+                        <button onclick="startUp()" id="start"><h1>Start</h1></button>
+                        <button onclick="openMech()" id="mechanics"><h1>Mechanics</h1></button>
+                    </div>
+                </div>
+
+                <div id="window">
+                    <h3 class="selectTitle">'''Choose Your Pokemon'''</h3>
+                    <div class="selection">
+                        
+                        <div class="rock"> <button onclick="closeChoices(1)" id="btn1"><img src="/Assets/Golem-removebg-preview.png" alt=""><p>Golem : Rock</p></div> </button> 
+                        <div class="paper"> <button onclick="closeChoices(2)" id="btn2"><img src="/Assets/Kartana.png" alt=""><p>Kartana : Paper</p></div> </button>
+                        <div class="scissors"> <button onclick="closeChoices(3)" id="btn3"><img src="/Assets/Scizor.png" alt=""><p>Scizor : Scissors</p></div> </button>
+                    </div>
+                </div>
+
+                    <div id="play">
+                        <h1>Final Scores</h1>
+                        <div class="scoreContainer">
+                            <h3>Player</h3> <h3>Computer</h3>
+                        </div>
+                        <div class="scoreContent">
+                            <h2 id="pscore1">0</h2> <h2 id="cscore1">0</h2>
+                        </div>
+                        <div id="winners" class="winner">End</div>
+                        <div class="playAgainBtns">
+                            <button onclick="playAgainClick()" class="retry">Play Again</button>
+                            <button onclick="endUp()" class="menu">Title</button>
+                        </div>                       
+                    </div>
+               
+                
             </div>
 
             
